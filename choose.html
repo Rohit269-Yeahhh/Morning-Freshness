@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .choices {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .nice {
+      background-color: #a1ffce;
+      color: #1a1a1a;
+    }
+
+    .nice:hover {
+      background-color: #b6ffd6;
+    }
+
+    .bad {
+      background-color: #ff6b6b;
+      color: white;
+    }
+
+    .bad:hover {
+      background-color: #ff7c7c;
+    }
+  </style>
+</head>
+<body>
+  <h2>The universe is awake. Choose your day:</h2>
+  <div class="choices">
+    <button class="nice" onclick="location.href='nice.html'">Have a Nice Day</button>
+    <button class="bad" onclick="location.href='bad.html'">Have a Bad Day</button>
+  </div>
+</body>
+</html>
