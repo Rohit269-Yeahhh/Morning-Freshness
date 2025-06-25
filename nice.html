@@ -60,15 +60,14 @@
       "https://i.pinimg.com/originals/6d/13/43/6d1343e6847bc10ec4e7c5b1fcbe7a35.jpg"
     ];
 
-    const flower = document.getElementById("flower");
-
     function showFlower() {
-      const chosen = flowers[Math.floor(Math.random() * flowers.length)];
-      flower.src = chosen;
+      const flowerImg = document.getElementById("flower");
+      const random = flowers[Math.floor(Math.random() * flowers.length)];
+      flowerImg.src = random;
     }
 
-    // Show one immediately on load
-    showFlower();
+    // Automatically show a flower on page load
+    window.onload = showFlower;
   </script>
 </body>
 </html>
