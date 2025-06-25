@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nice Day 🌸</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #1b1b2f;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 20px;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      max-width: 90%;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ffb6c1;
+      transition: 0.4s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 A Flower For You</h1>
+  <button onclick="showFlower()">Show Me Another</button>
+  <div>
+    <img id="flower" src="" alt="Anime Flower will appear here">
+  </div>
+
+  <script>
+    const flowers = [
+      "https://i.pinimg.com/originals/56/8b/b7/568bb7cb79857e2384a8c60e05032bb4.jpg",
+      "https://i.pinimg.com/originals/af/b6/63/afb663c6d02b81f881e3ac486315c17c.jpg",
+      "https://i.pinimg.com/originals/f0/61/5c/f0615c6a5e02d3dc1305eb9e5ea8dcb9.jpg",
+      "https://i.pinimg.com/originals/ed/37/e5/ed37e5a08e95f8a3eb8052735dcecd77.jpg",
+      "https://i.pinimg.com/originals/6d/13/43/6d1343e6847bc10ec4e7c5b1fcbe7a35.jpg"
+    ];
+
+    const flower = document.getElementById("flower");
+
+    function showFlower() {
+      const chosen = flowers[Math.floor(Math.random() * flowers.length)];
+      flower.src = chosen;
+    }
+
+    // Show one immediately on load
+    showFlower();
+  </script>
+</body>
+</html>
